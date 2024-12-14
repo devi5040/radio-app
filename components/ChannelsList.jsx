@@ -16,19 +16,29 @@ const ChannelsList = () => {
       channelNumber: '1.3',
     },
     {
-      title: 'Chilltrax',
+      title: 'Chilltraxxx',
       url: 'https://strm112.1.fm/blues_mobile_mp3',
       channelNumber: '1.4',
     },
   ];
   return (
     <View style={styles.channelContainer}>
+      <Text style={{height: '10%', backgroundColor: '#000'}}>Hello</Text>
       <FlatList
         data={data}
         renderItem={({item}) => <SingleChannel channel={item} />}
         keyExtractor={item => item.channelNumber}
         horizontal={true}
       />
+      <Text
+        style={{
+          marginVertical: 10,
+          fontSize: 40,
+          justifyContent: 'center',
+          backgroundColor: 'red',
+        }}>
+        add channel
+      </Text>
     </View>
   );
 };

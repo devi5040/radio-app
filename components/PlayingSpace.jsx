@@ -50,14 +50,6 @@ const PlayingSpace = () => {
   const playRadio = () => {
     if (soundRef.current && !playingState) {
       setPlayingState(true);
-      // soundRef.current.play(success => {
-      //   if (success) {
-      //     Alert.alert('Streaming started');
-      //   } else {
-      //     Alert.alert('Playback failed');
-      //     setPlayingState(false);
-      //   }
-      // });
       soundRef.current.play(
         success => {
           if (success) {
